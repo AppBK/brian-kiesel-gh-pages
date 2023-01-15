@@ -1,1 +1,110 @@
 /* TODO Add site wide styles */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@keyframes spreadName {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes risingName {
+  0% {
+    transform: translateY(32px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes descendingName {
+  0% {
+    transform: translateY(-32px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#main-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-content {
+  width: 80%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  background-color: black;
+}
+
+#transforming-name {
+  margin-top: 100px;
+  width: 100%;
+  height: 1px;
+  background-color: #9D0606;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: spreadName;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.emerging {
+  font-size: 48px;
+  color: #9D0606;
+  padding: 0px;
+  margin: 0px;
+}
+
+#falling-name {
+  margin-top: -11px;
+  margin-right: 8%;
+  position: absolute;
+  top: 11px;
+  right: 0px;
+  /* height: 40px; */
+  overflow: hidden;
+  /* border: 1px solid black; */
+}
+
+#rising-name {
+  margin-left: 8%;
+  position: absolute;
+  top: -42px;
+  overflow: hidden;
+  /* border: 1px solid black; */
+}
+
+#name-from-above {
+  padding: 0px;
+  height: 42px;
+  position: relative;
+  /* top: 32px; */
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: risingName;
+}
+
+#name-from-below {
+  height: 42px;
+  position: relative;
+  top: -11px;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: descendingName;
+}
