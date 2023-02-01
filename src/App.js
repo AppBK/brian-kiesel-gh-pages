@@ -1,6 +1,11 @@
 function App() {
   return (
     <>
+    <div id="black-frost">
+      <video id="curtains-vid" autoplay="autoplay" loop="true" muted defaultmuted>
+        <source id="red-curtains" src="/red-curtains-sc.mp4" type="video/mp4"></source>
+      </video>
+    </div>
     <div id="main-outer">
       <div id="main-content">
         <div id="transforming-name">
@@ -9,7 +14,6 @@ function App() {
         </div>
         <div id="headshot-container">
           <img id ="headshot" src="/Brian_Kiesel_Headshots_01.jpg"></img>
-          <div id="circle-it"></div>
         </div>
         {/* <div id="language-button"> */}
           {/* <div id="concave-left">

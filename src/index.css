@@ -71,6 +71,7 @@
   border-left: 1px solid black;
   border-right: 1px solid black;
   background-color: black;
+  opacity: 0.7;
   position: relative;
   overflow: hidden;
 }
@@ -426,7 +427,7 @@
   animation-name: risingHead;
 }
 
-/* #language-tab-reveal {
+#language-tab-reveal {
   position: absolute;
   top: 400px;
   right: -104px;
@@ -443,27 +444,43 @@
   position: absolute;
   left: 70px;
   top: 4px;
-} */
+}
 
-/* #language-slide-together {
+#language-slide-together {
   position: absolute;
   z-index: 21;
   right: 0px;
   top: 0px;
   width: fit-content;
   height: fit-content;
-} */
+}
 
-/* #circle-it {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
+#black-frost {
+  opacity: 1;
+  background-color: black;
   position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 74px;
-  border: 10px solid black;
-  overflow: hidden;
-} */
+  z-index: auto;
+  width: 80%;
+  height: 100vh;
+}
+
+#curtains-vid {
+  width: 100%;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#red-curtains {
+  width: auto;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  z-index: -1;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
 
 /* 40px */
