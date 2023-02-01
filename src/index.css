@@ -2,6 +2,8 @@
 * {
   margin: 0px;
   padding: 0px;
+  border: 0px;
+  box-sizing: border-box;
 }
 
 @keyframes spreadName {
@@ -31,6 +33,29 @@
   }
 }
 
+@keyframes languageTabEmerge {
+  from {
+    right: -144px;
+  }
+
+  to {
+    right: -104px;
+  }
+}
+
+@keyframes risingHead {
+  from {
+    top: 100%;
+    opacity: 0;
+  }
+
+  to {
+    top: 56px;
+    opacity: 1;
+  }
+}
+
+
 #main-outer {
   display: flex;
   flex-direction: column;
@@ -39,13 +64,15 @@
 
 #main-content {
   width: 80%;
-  height: 600px;
-  display: flex;
+  height: 100vh;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   border-left: 1px solid black;
   border-right: 1px solid black;
   background-color: black;
+  position: relative;
+  overflow: hidden;
 }
 
 #transforming-name {
@@ -108,3 +135,335 @@
   animation-iteration-count: 1;
   animation-name: descendingName;
 }
+
+/*  Language Options */
+
+.rising-languages {
+  padding-top: 5px;
+  position: absolute;
+  z-index: 6;
+  color: white;
+}
+
+.rising-languages:hover {
+  cursor: pointer;
+  color: rgb(170, 170, 170);
+  transition: all 0.2s ease-in-out;
+}
+
+.rising-languages:active {
+  color: purple;
+}
+
+#nihongo {
+  padding-left: 8px;
+  right: 40px;
+}
+
+#concave-right {
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  right: -34.5px;
+  /* overflow: hidden; */
+}
+
+.concavity {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border: 1px solid white;
+}
+
+.cr {
+  top: -18px;
+  right: 0px;
+  left: -0.4px;
+  border-radius: 100% 0 0 0;
+  border: 1.1px solid white;
+  border-bottom: none;
+  border-right: none;
+}
+
+#fill-corner-right {
+  position: absolute;
+  bottom: 1.7px;
+  left: -7.9px;
+  height: 9px;
+  width: 9px;
+  border-radius: 25%;
+  border: 0.8px solid white;
+  border-left: none;
+  border-top: none;
+  z-index: 40;
+}
+
+#exp1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+}
+
+#language-tab {
+  position: absolute;
+  top: 400px;
+  right: -104px;
+  transform: rotate(90deg);
+  height: 36px;
+  width: 240px;
+  animation-duration: 2s;
+  animation-name: languageTabEmerge;
+}
+
+#curve-right {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid white;
+  border-left: none;
+  border-top: none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 2;
+}
+
+#curve-left {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid white;
+  border-right: none;
+  border-top: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+}
+
+#bottom-border-test {
+  box-sizing: content-box;
+  width: 200px;
+  height: 0px;
+  /* background-color: white; */
+  border: 1px solid white;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  z-index: 4;
+}
+
+#curve-out-right {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  border-bottom: none;
+  border-right: none;
+  right: -35px;
+  top: 0px;
+  z-index: 2;
+}
+
+#curve-out-left {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  border-bottom: none;
+  border-left: none;
+  left: -35px;
+  top: 0px;
+  z-index: 2;
+}
+
+#remove-center {
+  position: absolute;
+  bottom: 1px;
+  left: 20px;
+  height: 16px;
+  width: 200px;
+  background-color: black;
+  z-index: 3;
+}
+
+#remove-curve-in-top-inside {
+  position: relative;
+  top: 1px;
+  left: 1px;
+  width: 17px;
+  height: 27px;
+  border-radius: 50%;
+  border-bottom-left-radius: 18px;
+  /* border: 0.5px solid white; */
+  background-color: black;
+  z-index: 4;
+}
+
+#touchup-inside-top {
+  position: absolute;
+  width: 4px;
+  height: 6px;
+  /* border: 1px solid white; */
+  background-color: black;
+  z-index: 5;
+  bottom: 10px;
+  left: -0.5px;
+  transform: rotate(-8deg);
+}
+
+#remove-curve-in-top-outside {
+  width: 38px;
+  height: 38px;
+  /* border: 1px solid white; */
+  border-top-right-radius: 8px;
+  background-color: black;
+  position: absolute;
+  left: -42px;
+  top: 2.5px;
+  transform: rotate(52deg);
+  z-index: 4;
+}
+
+#touchup-outside-top {
+  position: absolute;
+  bottom: 34px;
+  left: 26.8px;
+  width: 4px;
+  height: 6px;
+  /* border: 1px solid white; */
+  background-color: black;
+  z-index: 5;
+  transform: rotate(-66deg);
+}
+
+#remove-curve-in-bottom-inside {
+  position: relative;
+  top: -25px;
+  right: -222.6px;
+  width: 17px;
+  height: 22px;
+  border-radius: 50%;
+  border-bottom-right-radius: 18px;
+  /* border: 1px solid white; */
+  background-color: black;
+  z-index: 4;
+}
+
+#touchup-inside-bottom {
+  width: 4px;
+  height: 6px;
+  /* border: 1px solid white; */
+  background-color: black;
+  transform: rotate(4deg);
+  position: absolute;
+  z-index: 4;
+  border-radius: 6px;
+  right: 1.2px;
+  bottom: 3px;
+}
+
+#remove-curve-in-bottom-outside {
+  width: 38px;
+  height: 39px;
+  /* border: 1px solid white; */
+  border-top-left-radius: 8px;
+  background-color: black;
+  position: absolute;
+  right: -42.5px;
+  top: 3px;
+  transform: rotate(-48deg);
+  z-index: 4;
+}
+
+#touchup-outside-bottom {
+  width: 4px;
+  height: 6px;
+  /* border: 1px solid white; */
+  background-color: black;
+  transform: rotate(60deg);
+  position: absolute;
+  right: 29px;
+  bottom: 34.3px;
+  z-index: 4;
+}
+
+#english {
+  left: 40px;
+  padding-top: 6px;
+}
+
+.language-hover:hover {
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  border-color: #9D0606;
+}
+
+#headshot {
+  width: 400px;
+  position: absolute;
+  left: -99px;
+  top: -15px;
+}
+
+#headshot-container {
+  position: relative;
+  z-index: 1;
+  top: 56px;
+  left: calc(50% - 120px);
+  width: 240px;
+  height: 240px;
+  border: 16px solid black;
+  overflow: hidden;
+  border-radius: 120px;
+  animation-duration: 2s;
+  animation-name: risingHead;
+}
+
+/* #language-tab-reveal {
+  position: absolute;
+  top: 400px;
+  right: -104px;
+  transform: rotate(90deg);
+  height: 36px;
+  width: 240px;
+  z-index: 20;
+  background-color: rgb(154, 154, 154);
+}
+
+#languages {
+  color: #9D0606;
+  font-weight: bold;
+  position: absolute;
+  left: 70px;
+  top: 4px;
+} */
+
+/* #language-slide-together {
+  position: absolute;
+  z-index: 21;
+  right: 0px;
+  top: 0px;
+  width: fit-content;
+  height: fit-content;
+} */
+
+/* #circle-it {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 74px;
+  border: 10px solid black;
+  overflow: hidden;
+} */
+
+/* 40px */
